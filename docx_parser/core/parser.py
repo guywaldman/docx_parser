@@ -72,6 +72,7 @@ class DocumentParser(object):
             return None
         return {
             'type': self.image_as,
+            'alt': element.xpath('.//a:alt/@*')[0],
             'filename': filename,
             'image': image,
         }
